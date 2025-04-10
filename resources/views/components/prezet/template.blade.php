@@ -6,7 +6,7 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <x-prezet::meta />
+        <x-prezet.meta />
 
         <!-- Scripts -->
         <script
@@ -30,8 +30,8 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen">
-            <x-prezet::alpine>
-                <x-prezet::header />
+            <x-prezet.alpine>
+                <x-prezet.header />
                 <div
                     class="relative mx-auto flex w-full max-w-8xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12"
                 >
@@ -52,7 +52,7 @@
                         {{ $right }}
                     @endif
                 </div>
-            </x-prezet::alpine>
+            </x-prezet.alpine>
         </div>
     </body>
 </html>

@@ -5,7 +5,7 @@
     /* @var \Illuminate\Support\Collection<int,\BenBjurstrom\Prezet\Data\DocumentData> $articles */
 @endphp
 
-<x-prezet::template>
+<x-prezet.template>
     @seo([
         'title' => 'Prezet: Markdown Blogging for Laravel',
         'description' =>
@@ -13,7 +13,7 @@
         'url' => route('prezet.index'),
     ])
     <x-slot name="left">
-        <x-prezet::sidebar :nav="$nav" />
+        <x-prezet.sidebar :nav="$nav" />
     </x-slot>
     <section>
         <div class="divide-y divide-gray-200">
@@ -76,7 +76,7 @@
             <ul class="divide-y divide-gray-200">
                 @foreach ($articles as $article)
                     <li class="py-12">
-                        <x-prezet::article :article="$article" />
+                        <x-prezet.article :article="$article" />
                     </li>
                 @endforeach
             </ul>
@@ -85,4 +85,4 @@
             </div>
         </div>
     </section>
-</x-prezet::template>
+</x-prezet.template>

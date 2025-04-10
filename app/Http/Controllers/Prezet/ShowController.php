@@ -18,7 +18,7 @@ class ShowController
         $docData = Prezet::getDocumentDataFromFile($doc->filepath);
         $linkedData = json_encode(Prezet::getLinkedData($docData), JSON_UNESCAPED_SLASHES);
 
-        return view('prezet::show', [
+        return view('prezet.show', [
             'document' => $docData,
             'linkedData' => $linkedData,
             'headings' => $headings,

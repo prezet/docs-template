@@ -33,7 +33,7 @@ class IndexController
 
         $docsData = $docs->map(fn (Document $doc) => app(DocumentData::class)::fromModel($doc));
 
-        return view('prezet::index', [
+        return view('prezet.index', [
             'nav' => $nav,
             'articles' => $docsData,
             'paginator' => $docs,

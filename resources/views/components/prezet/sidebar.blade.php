@@ -8,7 +8,7 @@
         class="min-h-full w-full max-w-xs bg-white px-4 pb-12 pt-24 sm:px-6"
         x-on:click.outside="showSidebar = false"
     >
-        <x-prezet::nav :nav="$nav" />
+        <x-prezet.nav :nav="$nav" />
     </div>
 </div>
 
@@ -22,7 +22,7 @@
     <div
         class="sticky top-[4.75rem] -ml-0.5 flex h-[calc(100vh-4.75rem)] w-64 flex-col justify-between overflow-y-auto overflow-x-hidden pb-4 pl-0.5 pr-8 pt-16 xl:w-72 xl:pr-16"
     >
-        <x-prezet::nav :nav="$nav" />
+        <x-prezet.nav :nav="$nav" />
         <div class="mt-16 text-xs text-gray-400">
             <a target="_blank" href="https://prezet.com">Powered by Prezet</a>
         </div>

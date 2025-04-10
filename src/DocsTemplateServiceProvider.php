@@ -29,10 +29,13 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
                     $this->copyViews($command);
                     $this->copyCss($command);
                     $this->copyContent($command);
+                    $this->copyViteConfig($command);
                     $this->installNodeDependencies($command);
 
                     $command->newLine();
                     $command->info('Docs Template installed successfully.');
+                    $command->warn('Remember to check your tailwind.config.js and add `require("./tailwind.docs.config.js")` to the presets array if needed.');
+                    $command->warn('Run `npm run dev` (or yarn/pnpm equivalent) to build your assets.');
                 });
             });
     }
@@ -135,20 +138,38 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
         }
     }
 
+    protected function copyViteConfig(InstallCommand $command): void
+    {
+        $source = self::packagePath('vite.config.js');
+        $destination = base_path('vite.config.js');
+
+        if (! File::exists($source)) {
+            $command->error('Source vite.config.js not found: ' . $source);
+            return;
+        }
+
+        $command->info('Copying vite.config.js...');
+
+        $fileExists = File::exists($destination);
+
+        File::copy($source, $destination);
+
+        if ($fileExists) {
+            $command->warn('Overwrote existing vite.config.js. Please review the file (' . $destination . ') to ensure it meets your project\'s requirements.');
+        }
+    }
+
     protected function installNodeDependencies(InstallCommand $command): void
     {
         $command->info('Installing node dependencies...');
 
         $packages = [
-            'tailwindcss',
             'alpinejs',
             '@tailwindcss/forms',
             '@tailwindcss/typography',
-            'autoprefixer',
-            'postcss',
-            'vite',
-            'laravel-vite-plugin',
-            'tailwindcss-animate',
+            '@tailwindcss/vite',
+            'tailwindcss@4',
+            'vite-plugin-watch-and-run'
         ];
 
         if (File::exists(base_path('pnpm-lock.yaml'))) {

@@ -28,7 +28,7 @@
             href="{{ route('prezet.index') }}"
             class="block flex items-center space-x-2"
         >
-            <x-prezet::logo />
+            <x-prezet.logo />
             <span class="text-2xl font-bold text-gray-900">
                 {{ strtoupper(config('app.name')) }}
             </span>
@@ -37,7 +37,7 @@
     <div
         class="relative flex basis-0 items-center justify-end gap-3 sm:gap-8 md:grow lg:gap-6"
     >
-        <x-prezet::search />
+        <x-prezet.search />
         <a
             class="group"
             aria-label="GitHub"
