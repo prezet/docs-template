@@ -4,7 +4,6 @@ namespace Prezet\DocsTemplate;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Process;
-use Illuminate\Support\Arr;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -23,19 +22,17 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasInstallCommand(function(InstallCommand $command) {
                 $command->startWith(function(InstallCommand $command) {
-                    $command->info('Installing Docs Template...');
+                    $command->info('Installing Prezet Docs Template...');
 
                     $this->copyRoutes($command);
                     $this->copyControllers($command);
                     $this->copyViews($command);
                     $this->copyCss($command);
-                    // $this->installNodeDependencies($command);
+                    $this->copyContent($command);
+                    $this->installNodeDependencies($command);
 
                     $command->newLine();
                     $command->info('Docs Template installed successfully.');
-                    $command->warn('Please check your vite.config.js and tailwind.config.js to ensure they meet your project requirements.');
-                    $command->warn('Remember to add `require("./tailwind.docs.config.js")` to the presets array in your tailwind.config.js.');
-                    $command->warn('Run `npm run dev` (or yarn/pnpm equivalent) to build your assets.');
                 });
             });
     }
@@ -118,6 +115,23 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
              File::copy($cssSource, $cssDestination);
         } else {
              $command->warn('Skipping copying prezet.css: already exists.');
+        }
+    }
+
+    protected function copyContent(InstallCommand $command): void
+    {
+        $sourceDir = self::packagePath('content');
+        $destinationDir = base_path('prezet');
+
+        if (! File::isDirectory($destinationDir)) {
+             $command->info('Copying content directory to ' . $destinationDir);
+             if (File::isDirectory($sourceDir)) {
+                 File::copyDirectory($sourceDir, $destinationDir);
+             } else {
+                 $command->error('Source content directory not found: ' . $sourceDir);
+             }
+        } else {
+             $command->warn('Skipping copying content directory: destination already exists (' . $destinationDir . ')');
         }
     }
 
