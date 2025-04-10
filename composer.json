@@ -21,9 +21,10 @@
         "illuminate/contracts": "^10.0||^11.0||^12.0"
     },
     "require-dev": {
+        "benbjurstrom/prezet": "^1.0@RC",
+        "larastan/larastan": "^2.9||^3.0",
         "laravel/pint": "^1.14",
         "nunomaduro/collision": "^8.1.1||^7.10.0",
-        "larastan/larastan": "^2.9||^3.0",
         "orchestra/testbench": "^10.0.0||^9.0.0||^8.22.0",
         "pestphp/pest": "^3.0",
         "pestphp/pest-plugin-arch": "^3.0",
@@ -34,14 +35,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Prezet\\DocsTemplate\\": "src/",
-            "Prezet\\DocsTemplate\\Database\\Factories\\": "database/factories/"
+            "Prezet\\DocsTemplate\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Prezet\\DocsTemplate\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "Workbench\\App\\": "workbench/app/",
+            "App\\": "app/"
         }
     },
     "scripts": {
@@ -63,10 +64,7 @@
         "laravel": {
             "providers": [
                 "Prezet\\DocsTemplate\\DocsTemplateServiceProvider"
-            ],
-            "aliases": {
-                "DocsTemplate": "Prezet\\DocsTemplate\\Facades\\DocsTemplate"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
