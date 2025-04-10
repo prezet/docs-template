@@ -15,7 +15,9 @@
     ])
 
     @push('jsonld')
-        <script type="application/ld+json">{!! $linkedData !!}</script>
+        <script type="application/ld+json">
+            {!! $linkedData !!}
+        </script>
     @endpush
 
     {{-- Left Sidebar --}}
@@ -26,7 +28,7 @@
     {{-- Main Content --}}
     <article>
         <header class="mb-9 space-y-1">
-            <p class="font-display text-sm font-medium text-primary-600">
+            <p class="font-display text-primary-600 text-sm font-medium">
                 {{ $document->category }}
             </p>
             <h1
@@ -36,7 +38,7 @@
             </h1>
         </header>
         <div
-            class="prose-headings:font-display prose prose-gray max-w-none prose-a:border-b prose-a:border-dashed prose-a:border-black/30 prose-a:font-semibold prose-a:no-underline prose-a:hover:border-solid prose-img:rounded-sm"
+            class="prose-headings:font-display prose prose-gray prose-a:border-b prose-a:border-dashed prose-a:border-black/30 prose-a:font-semibold prose-a:no-underline prose-a:hover:border-solid prose-img:rounded-sm max-w-none"
         >
             {!! $body !!}
         </div>

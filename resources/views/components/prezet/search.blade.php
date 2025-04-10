@@ -186,14 +186,14 @@ options: [],
         x-ref="elToggleButton"
         x-on:click="openCommandPalette()"
         type="button"
-        class="group inline-flex items-center justify-center gap-2 rounded-lg border-zinc-200 bg-white p-1.5 text-sm/6 font-medium text-zinc-800 hover:border-zinc-300 hover:text-zinc-900 hover:shadow-xs focus:ring-zinc-300/25 active:border-zinc-200 active:shadow-none dark:border-zinc-700 dark:bg-transparent dark:text-zinc-300 dark:hover:border-zinc-600 dark:hover:text-zinc-200 dark:focus:ring-zinc-600/50 dark:active:border-zinc-700 lg:min-w-64 lg:border lg:px-3"
+        class="group inline-flex items-center justify-center gap-2 rounded-lg border-zinc-200 bg-white p-1.5 text-sm/6 font-medium text-zinc-800 hover:border-zinc-300 hover:text-zinc-900 hover:shadow-xs focus:ring-zinc-300/25 active:border-zinc-200 active:shadow-none lg:min-w-64 lg:border lg:px-3 dark:border-zinc-700 dark:bg-transparent dark:text-zinc-300 dark:hover:border-zinc-600 dark:hover:text-zinc-200 dark:focus:ring-zinc-600/50 dark:active:border-zinc-700"
     >
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
             data-slot="icon"
-            class="hi-mini hi-magnifying-glass inline-block size-6 opacity-60 group-hover:text-zinc-600 group-hover:opacity-100 dark:group-hover:text-zinc-400 lg:size-5"
+            class="hi-mini hi-magnifying-glass inline-block size-6 opacity-60 group-hover:text-zinc-600 group-hover:opacity-100 lg:size-5 dark:group-hover:text-zinc-400"
         >
             <path
                 fill-rule="evenodd"
@@ -228,7 +228,7 @@ options: [],
         x-transition:leave-end="opacity-0"
         x-bind:aria-hidden="!open"
         x-on:keydown.esc.prevent.stop="closeCommandPalette()"
-        class="z-90 fixed inset-0 overflow-y-auto overflow-x-hidden bg-zinc-900/75 p-4 backdrop-blur-xs will-change-auto md:py-8 lg:px-8 lg:py-16"
+        class="fixed inset-0 z-90 overflow-x-hidden overflow-y-auto bg-zinc-900/75 p-4 backdrop-blur-xs will-change-auto md:py-8 lg:px-8 lg:py-16"
         tabindex="-1"
         role="dialog"
         aria-modal="true"
@@ -281,7 +281,7 @@ options: [],
                         x-on:keydown.page-up.prevent.stop="navigateResults('first')"
                         x-on:keydown.page-down.prevent.stop="navigateResults('last')"
                         type="text"
-                        class="w-full border-none bg-transparent py-3 text-sm placeholder:text-zinc-500 focus:outline-hidden focus:ring-0 dark:placeholder:text-zinc-400"
+                        class="w-full border-none bg-transparent py-3 text-sm placeholder:text-zinc-500 focus:ring-0 focus:outline-hidden dark:placeholder:text-zinc-400"
                         placeholder="Search..."
                         tabindex="0"
                         role="combobox"

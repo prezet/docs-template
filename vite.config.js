@@ -1,8 +1,8 @@
 import path from 'path'
-import laravel from 'laravel-vite-plugin';
-import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin'
+import { defineConfig } from 'vite'
 import { watchAndRun } from 'vite-plugin-watch-and-run'
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
     plugins: [
@@ -11,7 +11,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/css/prezet.css',
-                'resources/js/app.js'
+                'resources/js/app.js',
             ],
             refresh: true,
         }),
@@ -22,7 +22,7 @@ export default defineConfig({
                 run: 'php artisan prezet:index',
                 delay: 1000,
                 // watchKind: ['add', 'change', 'unlink'], // (default)
-            }
-        ])
+            },
+        ]),
     ],
-});
+})
