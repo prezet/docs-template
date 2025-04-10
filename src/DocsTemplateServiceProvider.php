@@ -2,9 +2,9 @@
 
 namespace Prezet\DocsTemplate;
 
+use Prezet\DocsTemplate\Commands\DocsTemplateCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Prezet\DocsTemplate\Commands\DocsTemplateCommand;
 
 class DocsTemplateServiceProvider extends PackageServiceProvider
 {
