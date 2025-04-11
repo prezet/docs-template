@@ -101,8 +101,6 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
 
         if (! File::isDirectory($destinationDirComponents)) {
             $command->info('Creating Prezet components directory: '.$destinationDirComponents);
-            // Ensure the parent 'components' directory exists if needed
-            File::makeDirectory(resource_path('views/components'), 0755, true);
             File::makeDirectory($destinationDirComponents, 0755, true);
         }
 
