@@ -2,9 +2,11 @@
 
 namespace Prezet\DocsTemplate;
 
+
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Process;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
+use Prezet\DocsTemplate\Commands\DocsTemplateCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
