@@ -44,7 +44,7 @@
 @endforeach
 
 @if (seo('twitter.title'))
-        <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary_large_image" />
 @endif
 
 @if (seo('twitter.creator'))
