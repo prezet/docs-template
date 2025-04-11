@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Prezet;
 
-use Prezet\Prezet\Prezet;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Prezet\Prezet\Prezet;
 
 class ImageController
 {

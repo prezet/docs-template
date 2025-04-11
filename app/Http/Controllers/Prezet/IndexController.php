@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Prezet;
 
+use Illuminate\Http\Request;
+use Illuminate\View\View;
 use Prezet\Prezet\Data\DocumentData;
 use Prezet\Prezet\Models\Document;
 use Prezet\Prezet\Prezet;
-use Illuminate\Http\Request;
-use Illuminate\View\View;
 
 class IndexController
 {

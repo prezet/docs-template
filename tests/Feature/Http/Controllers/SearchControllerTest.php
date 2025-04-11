@@ -2,9 +2,9 @@
 
 namespace Prezet\DocsTemplate\Tests\Feature\Http\Controllers;
 
+use Prezet\DocsTemplate\Tests\TestCase;
 use Prezet\Prezet\Models\Document;
 use Prezet\Prezet\Models\Heading;
-use Prezet\DocsTemplate\Tests\TestCase;
 
 class SearchControllerTest extends TestCase
 {

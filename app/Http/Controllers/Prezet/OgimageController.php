@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Prezet;
 
-use Prezet\Prezet\Models\Document;
 use Illuminate\View\View;
+use Prezet\Prezet\Models\Document;
 
 class OgimageController
 {
