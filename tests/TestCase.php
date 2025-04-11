@@ -2,10 +2,9 @@
 
 namespace Prezet\DocsTemplate\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+use Orchestra\Testbench\TestCase as Orchestra;
 use Prezet\DocsTemplate\DocsTemplateServiceProvider;
 
 class TestCase extends Orchestra

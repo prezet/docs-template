@@ -9,7 +9,6 @@
     "useTabs": false,
     "bracketSpacing": true,
     "arrowParens": "always",
-    "tailwindConfig": "./tailwind.prezet.config.js",
     "plugins": ["prettier-plugin-blade", "prettier-plugin-tailwindcss"],
     "overrides": [
         {

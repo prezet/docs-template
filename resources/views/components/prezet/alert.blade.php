@@ -41,6 +41,7 @@
                     {{ $title }}
                 </h3>
             @endisset
+
             <div class="text-{{ $color }}-700 text-sm">
                 <p>{{ $body }}</p>
             </div>

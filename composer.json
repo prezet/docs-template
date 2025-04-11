@@ -17,11 +17,8 @@
     ],
     "repositories": [
         {
-            "type": "path",
-            "url": "/Volumes/code/prezet",
-            "options": {
-                "symlink": true
-            }
+            "type": "vcs",
+            "url": "https://github.com/benbjurstrom/prezet"
         }
     ],
     "require": {
@@ -30,7 +27,7 @@
         "illuminate/contracts": "^10.0||^11.0||^12.0"
     },
     "require-dev": {
-        "benbjurstrom/prezet": "*",
+        "benbjurstrom/prezet": "dev-main",
         "larastan/larastan": "^2.9||^3.0",
         "laravel/pint": "^1.14",
         "nunomaduro/collision": "^8.1.1||^7.10.0",

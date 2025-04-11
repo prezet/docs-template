@@ -31,7 +31,7 @@
                     <div class="mt-4 block sm:mt-0">
                         @if ($currentTag)
                             <span
-                                class="inline-flex items-center gap-x-0.5 rounded-md bg-gray-50 px-2.5 py-1.5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                                class="inline-flex items-center gap-x-0.5 rounded-md bg-gray-50 px-2.5 py-1.5 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset"
                             >
                                 {{ \Illuminate\Support\Str::title($currentTag) }}
                                 <a
@@ -52,7 +52,7 @@
 
                         @if ($currentCategory)
                             <span
-                                class="inline-flex items-center gap-x-0.5 rounded-md bg-gray-50 px-2.5 py-1.5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                                class="inline-flex items-center gap-x-0.5 rounded-md bg-gray-50 px-2.5 py-1.5 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset"
                             >
                                 {{ $currentCategory }}
                                 <a
