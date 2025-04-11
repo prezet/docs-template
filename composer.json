@@ -15,33 +15,40 @@
             "role": "Developer"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/prezet/prezet"
+        }
+    ],
     "require": {
-        "php": "^8.4",
+        "php": "^8.2",
         "spatie/laravel-package-tools": "^1.16",
         "illuminate/contracts": "^10.0||^11.0||^12.0"
     },
     "require-dev": {
+        "larastan/larastan": "^2.9||^3.0",
         "laravel/pint": "^1.14",
         "nunomaduro/collision": "^8.1.1||^7.10.0",
-        "larastan/larastan": "^2.9||^3.0",
         "orchestra/testbench": "^10.0.0||^9.0.0||^8.22.0",
         "pestphp/pest": "^3.0",
         "pestphp/pest-plugin-arch": "^3.0",
         "pestphp/pest-plugin-laravel": "^3.0",
         "phpstan/extension-installer": "^1.3||^2.0",
         "phpstan/phpstan-deprecation-rules": "^1.1||^2.0",
-        "phpstan/phpstan-phpunit": "^1.3||^2.0"
+        "phpstan/phpstan-phpunit": "^1.3||^2.0",
+        "prezet/prezet": "dev-main"
     },
     "autoload": {
         "psr-4": {
-            "Prezet\\DocsTemplate\\": "src/",
-            "Prezet\\DocsTemplate\\Database\\Factories\\": "database/factories/"
+            "Prezet\\DocsTemplate\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Prezet\\DocsTemplate\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "Workbench\\App\\": "workbench/app/",
+            "App\\": "app/"
         }
     },
     "scripts": {
@@ -63,10 +70,7 @@
         "laravel": {
             "providers": [
                 "Prezet\\DocsTemplate\\DocsTemplateServiceProvider"
-            ],
-            "aliases": {
-                "DocsTemplate": "Prezet\\DocsTemplate\\Facades\\DocsTemplate"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
