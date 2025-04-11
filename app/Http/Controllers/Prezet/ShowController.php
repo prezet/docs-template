@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Prezet;
 
-use Prezet\Prezet\Prezet;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Prezet\Prezet\Prezet;
 
 class ShowController
 {

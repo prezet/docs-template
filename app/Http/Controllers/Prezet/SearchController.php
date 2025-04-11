@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Prezet;
 
-use Prezet\Prezet\Prezet;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Prezet\Prezet\Prezet;
 
 class SearchController
 {
