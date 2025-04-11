@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Prezet;
 
-use BenBjurstrom\Prezet\Models\Document;
+use Prezet\Prezet\Models\Document;
 use Illuminate\View\View;
 
 class OgimageController

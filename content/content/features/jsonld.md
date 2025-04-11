@@ -118,8 +118,8 @@ For advanced changes—like adding custom properties or adjusting how fields are
    // app/Actions/CustomGetLinkedData.php
    namespace App\Actions;
 
-   use BenBjurstrom\Prezet\Actions\GetLinkedData;
-   use BenBjurstrom\Prezet\Data\DocumentData;
+   use Prezet\Prezet\Actions\GetLinkedData;
+   use Prezet\Prezet\Data\DocumentData;
 
    class CustomGetLinkedData extends GetLinkedData
    {
@@ -144,7 +144,7 @@ For advanced changes—like adding custom properties or adjusting how fields are
    namespace App\Providers;
 
    use Illuminate\Support\ServiceProvider;
-   use BenBjurstrom\Prezet\Actions\GetLinkedData;
+   use Prezet\Prezet\Actions\GetLinkedData;
    use App\Actions\CustomGetLinkedData;
 
    class AppServiceProvider extends ServiceProvider

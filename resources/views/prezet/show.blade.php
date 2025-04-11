@@ -3,7 +3,7 @@
     /* @var array $nav */
     /* @var array $headings */
     /* @var string $linkedData */
-    /* @var \BenBjurstrom\Prezet\Data\DocumentData $document */
+    /* @var \Prezet\Prezet\Data\DocumentData $document */
 @endphp
 
 <x-prezet.template>

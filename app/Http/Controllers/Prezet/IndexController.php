@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Prezet;
 
-use BenBjurstrom\Prezet\Data\DocumentData;
-use BenBjurstrom\Prezet\Models\Document;
-use BenBjurstrom\Prezet\Prezet;
+use Prezet\Prezet\Data\DocumentData;
+use Prezet\Prezet\Models\Document;
+use Prezet\Prezet\Prezet;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 

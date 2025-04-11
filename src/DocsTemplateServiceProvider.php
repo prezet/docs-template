@@ -33,6 +33,8 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
                     $this->copyContent($command);
                     $this->copyViteConfig($command);
                     $this->installNodeDependencies($command);
+                    Process::run('php artisan prezet:index --fresh');
+
                     $this->removeSelf($command, $packageName);
 
                     $command->newLine();
@@ -126,15 +128,11 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
         $sourceDir = self::packagePath('content');
         $destinationDir = base_path('prezet');
 
-        if (! File::isDirectory($destinationDir)) {
-            $command->info('Copying content directory to '.$destinationDir);
-            if (File::isDirectory($sourceDir)) {
-                File::copyDirectory($sourceDir, $destinationDir);
-            } else {
-                $command->error('Source content directory not found: '.$sourceDir);
-            }
+        $command->info('Copying content directory to '.$destinationDir);
+        if (File::isDirectory($sourceDir)) {
+            File::copyDirectory($sourceDir, $destinationDir);
         } else {
-            $command->warn('Skipping copying content directory: destination already exists ('.$destinationDir.')');
+            $command->error('Source content directory not found: '.$sourceDir);
         }
     }
 

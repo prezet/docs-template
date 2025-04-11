@@ -4,7 +4,7 @@
 @plugin '@tailwindcss/typography';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../vendor/benbjurstrom/prezet/resources/views/**/*.blade.php';
+@source '../../vendor/prezet/prezet/resources/views/**/*.blade.php';
 @source "../views";
 
 @custom-variant dark (&:is(.dark *));

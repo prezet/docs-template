@@ -101,7 +101,7 @@ This table manages the many-to-many relationship between documents and tags:
 The Prezet index is accessible via the Document model. You can use this model in your custom controllers to create advanced features and functionality.
 
 ```php
-use BenBjurstrom\Prezet\Models\Document;
+use Prezet\Prezet\Models\Document;
 ```
 
 ### Common Query Patterns

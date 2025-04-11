@@ -41,7 +41,7 @@
         <a
             class="group"
             aria-label="GitHub"
-            href="https://github.com/benbjurstrom/prezet"
+            href="https://github.com/prezet/prezet"
             target="_blank"
         >
             <svg

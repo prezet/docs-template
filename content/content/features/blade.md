@@ -88,7 +88,7 @@ The MarkdownBladeExtension is enabled by default in Prezet. If you need to disab
 'commonmark' => [
     'extensions' => [
         // ... other extensions
-        BenBjurstrom\Prezet\Extensions\MarkdownBladeExtension::class,
+        Prezet\Prezet\Extensions\MarkdownBladeExtension::class,
     ],
     // ... other config options
 ],

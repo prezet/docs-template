@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Prezet\DocsTemplate\DocsTemplateServiceProvider;
+use Prezet\Prezet\PrezetServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -17,7 +18,8 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            // DocsTemplateServiceProvider::class,
+            DocsTemplateServiceProvider::class,
+            PrezetServiceProvider::class,
         ];
     }
 
@@ -47,7 +49,7 @@ class TestCase extends Orchestra
             require __DIR__.'/../routes/prezet.php';
         });
 
-        $migrations = __DIR__.'/../vendor/benbjurstrom/prezet/database/migrations';
+        $migrations = __DIR__.'/../vendor/prezet/prezet/database/migrations';
         Artisan::call('migrate:fresh', [
             '--path' => $migrations,
             '--database' => 'prezet',

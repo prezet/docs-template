@@ -77,7 +77,7 @@ You'll notice that the `src` and `srcset` attributes have been modified to point
 
 <?php
 
-use BenBjurstrom\Prezet\Http\Controllers\ImageController;
+use Prezet\Prezet\Http\Controllers\ImageController;
 ...
 use Illuminate\Support\Facades\Route;
 
@@ -155,4 +155,4 @@ You can customize the image optimization settings in the `config/prezet.php` fil
 
 ## Disabling Image Optimization
 
-If you wish to disable the automatic image optimization, you can remove the `BenBjurstrom\Prezet\Extensions\MarkdownImageExtension::class` from the `extensions` array in the `commonmark` section of your `config/prezet.php` file.
+If you wish to disable the automatic image optimization, you can remove the `Prezet\Prezet\Extensions\MarkdownImageExtension::class` from the `extensions` array in the `commonmark` section of your `config/prezet.php` file.

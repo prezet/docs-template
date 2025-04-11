@@ -9,7 +9,7 @@ image: /prezet/img/ogimages/configuration.webp
 The configuration file is published as part of the package's installation command, but you can manually publish or re-publish it at any time by running:
 
 ```bash
-php artisan vendor:publish --provider="BenBjurstrom\Prezet\PrezetServiceProvider" --tag=prezet-config
+php artisan vendor:publish --provider="Prezet\Prezet\PrezetServiceProvider" --tag=prezet-config
 ```
 
 After installation or re-publication, the `config/prezet.php` file will look like this:
@@ -67,8 +67,8 @@ return [
             League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension::class,
             League\CommonMark\Extension\ExternalLink\ExternalLinkExtension::class,
             League\CommonMark\Extension\FrontMatter\FrontMatterExtension::class,
-            BenBjurstrom\Prezet\Extensions\MarkdownBladeExtension::class,
-            BenBjurstrom\Prezet\Extensions\MarkdownImageExtension::class,
+            Prezet\Prezet\Extensions\MarkdownBladeExtension::class,
+            Prezet\Prezet\Extensions\MarkdownImageExtension::class,
         ],
 
         'config' => [

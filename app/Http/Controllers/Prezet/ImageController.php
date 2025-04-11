@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Prezet;
 
-use BenBjurstrom\Prezet\Prezet;
+use Prezet\Prezet\Prezet;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
