@@ -11,7 +11,7 @@ Open Graph (OG) images are visual previews of your web pages that appear when co
 Here's how this page appears when posted on Threads:
 
 ```html +parse
-<x-prezet::threads
+<x-prezet.threads
     id="C-yDq7mS5II"
     username="benbjurstrom"
 />
@@ -38,7 +38,7 @@ The `image` field should contain the URL path to your image. For more details on
 While manually specifying ogimages gives you full control, Prezet's automatic OG image generation saves time and ensures consistency across your blog.
 
 ```html +parse
-<x-prezet::alert
+<x-prezet.alert
     type="info"
     title="Puppeteer Requirement"
     body="OG image generation relies on the Spatie Browsershot package which in turn requires the Puppeteer Node library."
@@ -66,7 +66,7 @@ Prezet provides an artisan command to generate OG images for your blog posts. Yo
 Regardless of the method you choose, the command automatically updates the frontmatter of your markdown files with the URL of the generated OG image.
 
 ```html +parse
-<x-prezet::alert
+<x-prezet.alert
     type="warning"
     title="Troubleshooting Tip"
     body="If you're generating OG Images in a local environment, make sure to set the `APP_URL` in your `.env` file to your local development URL."
