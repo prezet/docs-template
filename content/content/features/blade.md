@@ -16,7 +16,7 @@ The extension looks for fenced code blocks in your Markdown that include the `+p
 This extension was heavily inspired by Aaron Francis's [Blog Post](https://aaronfrancis.com/2023/rendering-blade-components-in-markdown-e2e74e55) and related YouTube video.
 
 ```html +parse
-<x-prezet::youtube videoid="dt1ado9wJi8" title="Supercharge Markdown with Laravel" date="2023-12-15T12:00:00+08:00"/>
+<x-prezet.youtube videoid="dt1ado9wJi8" title="Supercharge Markdown with Laravel" date="2023-12-15T12:00:00+08:00"/>
 ```
 
 ## YouTube Blade Component
@@ -24,7 +24,7 @@ This extension was heavily inspired by Aaron Francis's [Blog Post](https://aaron
 The YouTube video above was rendered from a blade component referenced in the markdown document for this page by inlining the following code block:
 
     ```html +parse
-    <x-prezet::youtube videoid="dt1ado9wJi8" title="Supercharge Markdown with Laravel"/>
+    <x-prezet.youtube videoid="dt1ado9wJi8" title="Supercharge Markdown with Laravel"/>
     ```
 
 You can view the source code for the `YouTube` component in the package's [youtube.blade.php](https://github.com/benbjurstrom/prezet/blob/main/resources/views/components/youtube.blade.php) file
