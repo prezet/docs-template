@@ -6,7 +6,7 @@ excerpt: Prezet is a markdown powered blogging platform that is easy to use and 
 image: /prezet/img/ogimages/features-markdown.webp
 ---
 
-This blog is generated entirely from markdown files. When you ran the `prezet::install` command markdown files were loaded into the `./prezet` directory located at the root of your Laravel application. Here is the structure of those files:
+This blog is generated entirely from markdown files. When you ran the `prezet:install` command markdown files were loaded into the `./prezet` directory located at the root of your Laravel application. Here is the structure of those files:
 
 ```bash
 prezet/
