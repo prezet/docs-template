@@ -6,6 +6,10 @@ category: Getting Started
 image: /prezet/img/ogimages/index.png
 ---
 
+```html +parse
+<x-prezet.alert type="warning" title="Outdated Documentation" body="You are viewing documentation for Prezet v0.x, which is an outdated version. For the latest documentation, please visit the current version." />
+```
+
 Prezet uses an SQLite index file to more efficiently query information about your markdown content. This index is crucial for features like pagination, sorting, and filtering of your blog posts or documentation pages.
 
 ## Managing the Index

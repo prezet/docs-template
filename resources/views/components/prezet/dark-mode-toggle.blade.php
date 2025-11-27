@@ -1,6 +1,6 @@
 <button
     x-data="{}"
-    class="group flex items-center justify-center p-2"
+    class="group flex items-center justify-center p-2 rounded-lg border border-gray-200 hover:border-gray-200 dark:border-gray-500"
     aria-label="Toggle dark mode"
     onclick="
                                         const isDark = document.documentElement.classList.toggle('dark');

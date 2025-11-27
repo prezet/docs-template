@@ -6,6 +6,10 @@ category: Getting Started
 image: /prezet/img/ogimages/configuration.webp
 ---
 
+```html +parse
+<x-prezet.alert type="warning" title="Outdated Documentation" body="You are viewing documentation for Prezet v0.x, which is an outdated version. For the latest documentation, please visit the current version." />
+```
+
 The configuration file is published as part of the package's installation command, but you can manually publish or re-publish it at any time by running:
 
 ```bash
