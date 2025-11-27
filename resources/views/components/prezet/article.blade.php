@@ -4,7 +4,7 @@
     >
         <dl>
             <dt class="sr-only">Published on</dt>
-            <dd class="text-base leading-6 font-medium text-gray-500">
+            <dd class="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
                 <time datetime="{{ $article->createdAt->toIso8601String() }}">
                     {{ $article->createdAt->format('F j, Y') }}
                 </time>
@@ -15,22 +15,22 @@
                 <div>
                     <h2 class="text-2xl leading-8 font-bold tracking-tight">
                         <a
-                            class="text-gray-900"
+                            class="text-gray-900 dark:text-gray-100"
                             href="{{ route('prezet.show', $article->slug) }}"
                         >
                             {{ $article->frontmatter->title }}
                         </a>
                     </h2>
-                    <div class="flex flex-wrap">
+                    <div class="flex flex-wrap pt-2">
                         <a
-                            class="text-primary-500 hover:text-primary-600 mr-3 text-sm font-medium uppercase"
+                            class="mr-3 text-sm font-medium uppercase text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
                             href="{{ route('prezet.index', ['category' => $article->category]) }}"
                         >
                             {{ $article->category }}
                         </a>
                         @foreach ($article->frontmatter->tags as $tag)
                             <a
-                                class="text-primary-500 hover:text-primary-600 mr-3 text-sm font-medium uppercase"
+                                class="mr-3 text-sm font-medium uppercase text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
                                 href="{{ route('prezet.index', ['tag' => $tag]) }}"
                             >
                                 {{ $tag }}
@@ -38,13 +38,13 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="prose max-w-none text-gray-500">
+                <div class="prose max-w-none text-gray-500 dark:text-gray-400">
                     {{ $article->frontmatter->excerpt }}
                 </div>
             </div>
             <div class="text-base leading-6 font-medium">
                 <a
-                    class="text-primary-500 hover:text-primary-600"
+                    class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
                     aria-label='Read more: "Release of Tailwind Nextjs Starter Blog v2.0"'
                     href="{{ route('prezet.show', $article->slug) }}"
                 >

@@ -1,32 +1,27 @@
-<nav class="text-base lg:text-sm">
-    <ul role="list" class="space-y-9">
-        @foreach ($nav as $section)
-            <li>
-                <p class="font-display font-medium text-gray-900">
-                    {{ $section['title'] }}
-                </p>
-                <ul
-                    role="list"
-                    class="mt-2 space-y-2 border-l-2 border-gray-100 lg:mt-4 lg:space-y-4 lg:border-gray-200"
-                >
-                    @foreach ($section['links'] as $link)
-                        <li class="relative">
-                            <a
-                                @class([
-                                    'before:-trangray-y-1/2 block w-full pl-3.5 before:pointer-events-none before:absolute before:top-1/2 before:-left-1 before:h-1.5 before:w-1.5 before:rounded-full',
-                                    'text-primary-500 before:bg-primary-500 font-semibold' =>
-                                        url()->current() === route('prezet.show', ['slug' => $link['slug']]),
-                                    'text-gray-500 before:hidden before:bg-gray-300 hover:text-gray-600 hover:before:block' =>
-                                        url()->current() !== route('prezet.show', ['slug' => $link['slug']]),
-                                ])
-                                href="{{ route('prezet.show', ['slug' => $link['slug']]) }}"
-                            >
-                                {{ $link['title'] }}
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
-            </li>
-        @endforeach
-    </ul>
-</nav>
+<div class="space-y-6">
+    @foreach ($nav as $section)
+        <div>
+            <h5 class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                {{ $section['title'] }}
+            </h5>
+            <ul class="space-y-1">
+                @foreach ($section['links'] as $link)
+                    <li>
+                        <a
+                            href="{{ route('prezet.show', ['slug' => $link['slug']]) }}"
+                            @class([
+                                'group flex w-full items-center gap-2 rounded-md px-3 py-1.5 text-sm transition-colors',
+                                'bg-primary-50 text-primary-700 font-medium dark:bg-primary-500/10 dark:text-primary-400' =>
+                                    url()->current() === route('prezet.show', ['slug' => $link['slug']]),
+                                'text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300' =>
+                                    url()->current() !== route('prezet.show', ['slug' => $link['slug']]),
+                            ])
+                        >
+                            {{ $link['title'] }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    @endforeach
+</div>
