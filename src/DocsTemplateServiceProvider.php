@@ -35,7 +35,7 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
                     $this->installNodeDependencies($command);
                     Process::run('php artisan prezet:index --fresh');
 
-                    $this->removeSelf($command, $packageName);
+                    // $this->removeSelf($command, $packageName);
 
                     $command->newLine();
                     $command->info('Prezet Docs Template installed successfully.');

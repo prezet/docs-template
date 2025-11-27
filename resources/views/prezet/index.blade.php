@@ -1,37 +1,28 @@
-@php
-    /* @var array $nav */
-    /* @var array|null|string $currentTag */
-    /* @var array|null|string $currentCategory */
-    /* @var \Illuminate\Support\Collection<int,\Prezet\Prezet\Data\DocumentData> $articles */
-@endphp
-
-<x-prezet.template>
+<x-prezet.template :nav="$nav" :headings="[]">
     @seo([
         'title' => 'Prezet: Markdown Blogging for Laravel',
         'description' =>
             'Transform your markdown files into SEO-friendly blogs, articles, and documentation!',
         'url' => route('prezet.index'),
     ])
-    <x-slot name="left">
-        <x-prezet.sidebar :nav="$nav" />
-    </x-slot>
-    <section>
+
+    <section class="mt-8 min-w-0 md:mr-8 xl:mr-0">
         <div class="divide-y divide-gray-200">
             <div class="space-y-2 pb-8 md:space-y-5">
                 <h1
-                    class="font-display text-4xl font-bold tracking-tight text-gray-900"
+                    class="font-display text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-200"
                 >
-                    Prezet Blog
+                    Documentation
                 </h1>
 
                 <div class="justify-between sm:flex">
-                    <p class="text-lg leading-7 text-gray-500">
-                        A blog created with Laravel and Tailwind.css
+                    <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
+                        Browse our documentation and guides
                     </p>
                     <div class="mt-4 block sm:mt-0">
                         @if ($currentTag)
                             <span
-                                class="inline-flex items-center gap-x-0.5 rounded-md bg-gray-50 px-2.5 py-1.5 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset"
+                                class="inline-flex items-center gap-x-0.5 rounded-md bg-gray-50 px-2.5 py-1.5 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset dark:bg-gray-800 dark:text-gray-400 dark:ring-gray-700"
                             >
                                 {{ \Illuminate\Support\Str::title($currentTag) }}
                                 <a
@@ -41,7 +32,7 @@
                                     <span class="sr-only">Remove</span>
                                     <svg
                                         viewBox="0 0 14 14"
-                                        class="h-3.5 w-3.5 stroke-gray-600/50 group-hover:stroke-gray-600/75"
+                                        class="h-3.5 w-3.5 stroke-gray-600/50 group-hover:stroke-gray-600/75 dark:stroke-gray-400"
                                     >
                                         <path d="M4 4l6 6m0-6l-6 6" />
                                     </svg>
@@ -52,7 +43,7 @@
 
                         @if ($currentCategory)
                             <span
-                                class="inline-flex items-center gap-x-0.5 rounded-md bg-gray-50 px-2.5 py-1.5 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset"
+                                class="inline-flex items-center gap-x-0.5 rounded-md bg-gray-50 px-2.5 py-1.5 text-xs font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset dark:bg-gray-800 dark:text-gray-400 dark:ring-gray-700"
                             >
                                 {{ $currentCategory }}
                                 <a
@@ -62,7 +53,7 @@
                                     <span class="sr-only">Remove</span>
                                     <svg
                                         viewBox="0 0 14 14"
-                                        class="h-3.5 w-3.5 stroke-gray-600/50 group-hover:stroke-gray-600/75"
+                                        class="h-3.5 w-3.5 stroke-gray-600/50 group-hover:stroke-gray-600/75 dark:stroke-gray-400"
                                     >
                                         <path d="M4 4l6 6m0-6l-6 6" />
                                     </svg>
@@ -73,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="divide-y divide-gray-200">
+            <ul class="divide-y divide-gray-200 dark:divide-gray-800">
                 @foreach ($articles as $article)
                     <li class="py-12">
                         <x-prezet.article :article="$article" />
