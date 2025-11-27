@@ -112,12 +112,20 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
     {
         $command->info('Copying CSS and Tailwind config...');
 
-        $cssSource = self::packagePath('resources/css/prezet.css');
-        $cssDestination = resource_path('css/prezet.css');
-        if (! File::exists($cssDestination)) {
-            File::copy($cssSource, $cssDestination);
-        } else {
-            $command->warn('Skipping copying prezet.css: already exists.');
+        $cssFiles = [
+            'prezet.css',
+            'lite-youtube.css',
+            'alpinejs-zoomable.css',
+        ];
+
+        foreach ($cssFiles as $cssFile) {
+            $cssSource = self::packagePath('resources/css/'.$cssFile);
+            $cssDestination = resource_path('css/'.$cssFile);
+            if (! File::exists($cssDestination)) {
+                File::copy($cssSource, $cssDestination);
+            } else {
+                $command->warn("Skipping copying {$cssFile}: already exists.");
+            }
         }
     }
 
