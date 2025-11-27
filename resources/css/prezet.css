@@ -73,20 +73,20 @@
     --color-secondary-950: var(--color-zinc-950);
 
     /* Accent colors (indigo-based, used for badges/filters) */
-    --color-accent: var(--color-indigo-600);
-    --color-accent-dark: var(--color-indigo-700);
-    --color-accent-light: var(--color-indigo-500);
-    --color-accent-50: var(--color-indigo-50);
-    --color-accent-100: var(--color-indigo-100);
-    --color-accent-200: var(--color-indigo-200);
-    --color-accent-300: var(--color-indigo-300);
-    --color-accent-400: var(--color-indigo-400);
-    --color-accent-500: var(--color-indigo-500);
-    --color-accent-600: var(--color-indigo-600);
-    --color-accent-700: var(--color-indigo-700);
-    --color-accent-800: var(--color-indigo-800);
-    --color-accent-900: var(--color-indigo-900);
-    --color-accent-950: var(--color-indigo-950);
+    --color-accent: var(--color-orange-600);
+    --color-accent-dark: var(--color-orange-700);
+    --color-accent-light: var(--color-orange-500);
+    --color-accent-50: var(--color-orange-50);
+    --color-accent-100: var(--color-orange-100);
+    --color-accent-200: var(--color-orange-200);
+    --color-accent-300: var(--color-orange-300);
+    --color-accent-400: var(--color-orange-400);
+    --color-accent-500: var(--color-orange-500);
+    --color-accent-600: var(--color-orange-600);
+    --color-accent-700: var(--color-orange-700);
+    --color-accent-800: var(--color-orange-800);
+    --color-accent-900: var(--color-orange-900);
+    --color-accent-950: var(--color-orange-950);
 }
 
 /*

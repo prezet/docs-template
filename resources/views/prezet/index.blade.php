@@ -23,12 +23,12 @@
                     <div class="flex flex-wrap items-center gap-2">
                         @if ($currentTag)
                             <span
-                                class="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-600/20 dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-400/30"
+                                class="inline-flex items-center gap-1.5 rounded-full bg-accent-50 px-3 py-1 text-xs font-medium text-accent-700 ring-1 ring-inset ring-accent-600/20 dark:bg-accent-500/10 dark:text-accent-400 dark:ring-accent-400/30"
                             >
                                 <span>Tag: {{ \Illuminate\Support\Str::title($currentTag) }}</span>
                                 <a
                                     href="{{ route('prezet.index', array_filter(request()->except('tag'))) }}"
-                                    class="group relative -mr-1 flex h-3.5 w-3.5 items-center justify-center rounded-full hover:bg-indigo-600/20 dark:hover:bg-indigo-400/20"
+                                    class="group relative -mr-1 flex h-3.5 w-3.5 items-center justify-center rounded-full hover:bg-accent-600/20 dark:hover:bg-accent-400/20"
                                 >
                                     <span class="sr-only">Remove</span>
                                     <svg class="h-3 w-3 stroke-current" viewBox="0 0 14 14" fill="none">
@@ -40,12 +40,12 @@
 
                         @if ($currentCategory)
                             <span
-                                class="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-600/20 dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-400/30"
+                                class="inline-flex items-center gap-1.5 rounded-full bg-accent-50 px-3 py-1 text-xs font-medium text-accent-700 ring-1 ring-inset ring-accent-600/20 dark:bg-accent-500/10 dark:text-accent-400 dark:ring-accent-400/30"
                             >
                                 <span>Category: {{ $currentCategory }}</span>
                                 <a
                                     href="{{ route('prezet.index', array_filter(request()->except('category'))) }}"
-                                    class="group relative -mr-1 flex h-3.5 w-3.5 items-center justify-center rounded-full hover:bg-indigo-600/20 dark:hover:bg-indigo-400/20"
+                                    class="group relative -mr-1 flex h-3.5 w-3.5 items-center justify-center rounded-full hover:bg-accent-600/20 dark:hover:bg-accent-400/20"
                                 >
                                     <span class="sr-only">Remove</span>
                                     <svg class="h-3 w-3 stroke-current" viewBox="0 0 14 14" fill="none">
@@ -79,7 +79,7 @@
                     <h3 class="text-lg font-medium text-gray-900 dark:text-white">No articles found</h3>
                     <p class="mt-1 text-gray-500 dark:text-gray-400">We couldn't find anything matching your criteria.</p>
                     <div class="mt-6">
-                        <a href="{{ route('prezet.index') }}" class="text-sm font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
+                        <a href="{{ route('prezet.index') }}" class="text-sm font-semibold text-accent-600 hover:text-accent-500 dark:text-accent-400 dark:hover:text-accent-300">
                             View all articles <span aria-hidden="true">&rarr;</span>
                         </a>
                     </div>

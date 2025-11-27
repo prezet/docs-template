@@ -1,9 +1,9 @@
-## 🎉 Getting Started
+## Getting Started
 
 - [Configuration](content/configuration)
 - [Sqlite Index](content/index)
 
-## 😎 Features
+## Features
 
 -  [Markdown Powered](content/features/markdown)
 -  [Blade Components](content/features/blade)
