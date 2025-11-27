@@ -34,7 +34,7 @@
             </div>
 
             <div
-                class="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300"
+                class="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-200"
             >
                 <p>{{ $document->frontmatter->description }}</p>
             </div>

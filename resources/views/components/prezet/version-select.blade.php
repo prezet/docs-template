@@ -2,8 +2,8 @@
     x-data="{
         getCurrentVersion() {
             let path = window.location.pathname;
-            if (path.includes('/v0.x')) return 'v0.x';
-            if (path.includes('/v1.0-rc')) return 'v1.0-rc';
+            if (path.includes('/v0.x/') || path.endsWith('/v0.x')) return 'v0.x';
+            if (path.includes('/v1.x/') || path.endsWith('/v1.x')) return 'v1.x';
             return 'v1.x';
         },
         currentVersion: '',
@@ -12,17 +12,43 @@
         },
         switchVersion(version) {
             let currentPath = window.location.pathname;
-            let basePath = currentPath;
 
-            // Strip any existing version prefix
-            basePath = basePath.replace(/^\/(v0\.x|v1\.0-rc)/, '');
+            // Remove any existing version from the path (v0.x or v1.x)
+            let pathWithoutVersion = currentPath
+                .replace(/\/v0\.x(\/|$)/, '/')
+                .replace(/\/v1\.x(\/|$)/, '/');
+            // Clean up potential double slashes
+            pathWithoutVersion = pathWithoutVersion.replace(/\/+/g, '/');
 
-            // Add new version prefix if not v1.x
+            // Split into segments
+            let segments = pathWithoutVersion.split('/').filter(s => s.length > 0);
+
             let newPath;
+
             if (version === 'v1.x') {
-                newPath = basePath || '/';
+                // v1.x is the default - no version prefix needed
+                newPath = segments.length > 0 ? '/' + segments.join('/') : '/';
             } else {
-                newPath = '/' + version + (basePath || '');
+                // For v0.x (and potentially other future versions)
+                // Known base paths - add more as needed (e.g., 'docs', 'api', etc.)
+                const knownBases = ['prezet', 'blog'];
+
+                if (segments.length === 0) {
+                    // Root with no content
+                    newPath = '/' + version;
+                } else if (knownBases.includes(segments[0])) {
+                    // First segment is a known base - insert version after it
+                    // Pattern: /{base}/{version}/{content}
+                    if (segments.length > 1) {
+                        newPath = '/' + segments[0] + '/' + version + '/' + segments.slice(1).join('/');
+                    } else {
+                        newPath = '/' + segments[0] + '/' + version;
+                    }
+                } else {
+                    // No known base - insert version at root
+                    // Pattern: /{version}/{content}
+                    newPath = '/' + version + '/' + segments.join('/');
+                }
             }
 
             if (newPath !== currentPath) {
@@ -62,19 +88,6 @@
                 class="px-2.5 py-1.5 w-full flex items-center rounded-md transition-colors focus:outline-hidden text-left text-gray-800 dark:text-gray-200"
             >
                 v1.x
-            </button>
-
-            <button
-                x-menu:item
-                type="button"
-                @click="switchVersion('v1.0-rc')"
-                :class="{
-                    'bg-gray-50 dark:bg-gray-700': currentVersion === 'v1.0-rc',
-                    'opacity-50 cursor-not-allowed': $menuItem.isDisabled,
-                }"
-                class="px-2.5 py-1.5 w-full flex items-center rounded-md transition-colors focus:outline-hidden text-left text-gray-800 dark:text-gray-200"
-            >
-                v1.0-rc
             </button>
 
             <button

@@ -17,7 +17,7 @@
                 href="https://prezet.com?utm_campaign=poweredBy&amp;utm_medium=referral&amp;utm_source=prezet"
                 target="_blank"
                 rel="noreferrer"
-                class="text-sm text-nowrap text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                class="text-sm text-nowrap text-gray-500 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-100"
             >
                 Powered by Prezet
             </a>

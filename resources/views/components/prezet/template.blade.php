@@ -64,7 +64,7 @@
         <div class="min-h-screen">
             <x-prezet.alpine>
                 <div
-                    class="relative text-gray-500 antialiased dark:text-gray-400"
+                    class="relative text-gray-500 antialiased dark:text-gray-200"
                 >
 
                     <x-prezet.alpine>
@@ -116,7 +116,7 @@
                                 >
                                     <div class="h-full overflow-y-auto overscroll-contain touch-pan-y ios-scroll px-4 pt-4 pb-12">
                                         <div class="relative lg:text-sm lg:leading-6">
-                                            <x-prezet.sidebar-left-content :nav="$nav" />
+                                            <x-prezet.sidebar-index :nav="$nav" />
                                         </div>
                                     </div>
                                 </aside>
@@ -133,7 +133,7 @@
                                 >
                                     <div class="h-full overflow-y-auto pr-0 md:pr-6 xl:pr-8">
                                         <div class="relative lg:text-sm lg:leading-6">
-                                            <x-prezet.sidebar-left-content :nav="$nav" />
+                                            <x-prezet.sidebar-index :nav="$nav" />
                                         </div>
                                     </div>
                                 </aside>

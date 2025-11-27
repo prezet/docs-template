@@ -28,7 +28,7 @@
                     <button
                         type="button"
                         x-on:click="openCommandPalette()"
-                        class="group flex h-9 w-full max-w-xs items-center gap-2 rounded-lg border border-gray-200 bg-white/50 px-3 text-sm text-gray-500 shadow-sm transition-all hover:border-gray-300 hover:bg-white hover:shadow-md dark:border-gray-800 dark:bg-gray-900/50 dark:text-gray-400 dark:hover:border-gray-700 dark:hover:bg-gray-900"
+                        class="group flex h-9 w-full max-w-xs items-center gap-2 rounded-lg border border-gray-200 bg-white/50 px-3 text-sm text-gray-500 shadow-sm transition-all hover:border-gray-300 hover:bg-white hover:shadow-md dark:border-gray-800 dark:bg-gray-900/50 dark:text-gray-200 dark:hover:border-gray-700 dark:hover:bg-gray-900"
                         aria-label="Open search"
                     >
                         <svg
@@ -44,8 +44,8 @@
                             <circle cx="11" cy="11" r="8"></circle>
                             <path d="m21 21-4.3-4.3"></path>
                         </svg>
-                        <span class="flex-1 text-left text-sm text-gray-500 dark:text-gray-400">Search...</span>
-                        <span class="flex items-center gap-0.5 rounded border border-gray-200 bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400">
+                        <span class="flex-1 text-left text-sm text-gray-500 dark:text-gray-200">Search...</span>
+                        <span class="flex items-center gap-0.5 rounded border border-gray-200 bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
                             <span x-text="searchModifierKey"></span>K
                         </span>
                     </button>
@@ -80,7 +80,7 @@
                     <button
                         type="button"
                         x-on:click="openCommandPalette()"
-                        class="lg:hidden flex h-8 w-8 items-center justify-center text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+                        class="lg:hidden flex h-8 w-8 items-center justify-center text-gray-500 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-100"
                         aria-label="Open search"
                     >
                         <span class="sr-only">Search...</span>
@@ -96,7 +96,7 @@
             class="flex h-14 w-full items-center py-4 text-left focus:outline-0 md:hidden"
         >
             <div
-                class="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+                class="text-gray-500 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-100"
             >
                 <span class="sr-only">Navigation</span>
                 <svg

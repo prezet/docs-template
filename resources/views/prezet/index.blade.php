@@ -13,7 +13,7 @@
                     <h1 class="font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
                         Documentation
                     </h1>
-                    <p class="max-w-2xl text-base leading-7 text-gray-600 dark:text-gray-400">
+                    <p class="max-w-2xl text-base leading-7 text-gray-600 dark:text-gray-200">
                         Browse our latest guides, tutorials, and updates.
                     </p>
                 </div>
@@ -56,7 +56,7 @@
                         @endif
 
                         @if($currentTag || $currentCategory)
-                            <a href="{{ route('prezet.index') }}" class="ml-1 text-xs font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">Clear all</a>
+                            <a href="{{ route('prezet.index') }}" class="ml-1 text-xs font-medium text-gray-500 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-100">Clear all</a>
                         @endif
                     </div>
                 @endif
@@ -77,7 +77,7 @@
                         </svg>
                     </div>
                     <h3 class="text-lg font-medium text-gray-900 dark:text-white">No articles found</h3>
-                    <p class="mt-1 text-gray-500 dark:text-gray-400">We couldn't find anything matching your criteria.</p>
+                    <p class="mt-1 text-gray-500 dark:text-gray-200">We couldn't find anything matching your criteria.</p>
                     <div class="mt-6">
                         <a href="{{ route('prezet.index') }}" class="text-sm font-semibold text-accent-600 hover:text-accent-500 dark:text-accent-400 dark:hover:text-accent-300">
                             View all articles <span aria-hidden="true">&rarr;</span>

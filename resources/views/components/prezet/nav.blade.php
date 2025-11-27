@@ -1,7 +1,7 @@
 <div class="space-y-6">
     @foreach ($nav as $section)
         <div>
-            <h5 class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+            <h5 class="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-200">
                 {{ $section['title'] }}
             </h5>
             <ul class="space-y-1">
@@ -13,7 +13,7 @@
                                 'group flex w-full items-center gap-2 rounded-md px-3 py-1.5 text-sm transition-colors',
                                 'bg-primary-50/50 text-primary-700 font-medium dark:bg-primary-500/10 dark:text-primary-400' =>
                                     url()->current() === route('prezet.show', ['slug' => $link['slug']]),
-                                'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300' =>
+                                'text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100' =>
                                     url()->current() !== route('prezet.show', ['slug' => $link['slug']]),
                             ])
                         >

@@ -46,7 +46,7 @@
                 x-on:keydown.page-up.prevent.stop="navigateSearchResults('first')"
                 x-on:keydown.page-down.prevent.stop="navigateSearchResults('last')"
                 type="text"
-                class="w-full border-none bg-transparent py-3 text-sm placeholder:text-gray-500 focus:outline-hidden focus:ring-0 dark:placeholder:text-gray-400"
+                class="w-full border-none bg-transparent py-3 text-sm placeholder:text-gray-500 focus:outline-hidden focus:ring-0 dark:placeholder:text-gray-200"
                 placeholder="Search..."
                 tabindex="0"
                 role="combobox"
@@ -95,7 +95,7 @@
                     'text-white bg-primary-600 dark:text-white dark:bg-primary-600': isSearchHighlighted(
                         option.id,
                     ),
-                    'text-gray-600 dark:text-gray-300': ! isSearchHighlighted(option.id),
+                    'text-gray-600 dark:text-gray-200': ! isSearchHighlighted(option.id),
                 }"
                 x-bind:data-selected="isSearchHighlighted(option.id)"
                 x-bind:data-id="option.id"
@@ -125,7 +125,7 @@
         class="rounded-b-xl bg-white p-3 dark:bg-gray-800"
     >
         <div
-            class="space-y-3 py-1.5 text-center text-sm text-gray-500 dark:text-gray-400"
+            class="space-y-3 py-1.5 text-center text-sm text-gray-500 dark:text-gray-200"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"

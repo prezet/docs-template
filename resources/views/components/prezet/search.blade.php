@@ -186,7 +186,7 @@ options: [],
         x-ref="elToggleButton"
         x-on:click="openCommandPalette()"
         type="button"
-        class="group inline-flex items-center justify-center gap-2 rounded-lg border-zinc-200 bg-white p-1.5 text-sm/6 font-medium text-zinc-800 hover:border-zinc-300 hover:text-zinc-900 hover:shadow-xs focus:ring-zinc-300/25 active:border-zinc-200 active:shadow-none lg:min-w-64 lg:border lg:px-3 dark:border-zinc-700 dark:bg-transparent dark:text-zinc-300 dark:hover:border-zinc-600 dark:hover:text-zinc-200 dark:focus:ring-zinc-600/50 dark:active:border-zinc-700"
+        class="group inline-flex items-center justify-center gap-2 rounded-lg border-zinc-200 bg-white p-1.5 text-sm/6 font-medium text-zinc-800 hover:border-zinc-300 hover:text-zinc-900 hover:shadow-xs focus:ring-zinc-300/25 active:border-zinc-200 active:shadow-none lg:min-w-64 lg:border lg:px-3 dark:border-zinc-700 dark:bg-transparent dark:text-zinc-200 dark:hover:border-zinc-600 dark:hover:text-zinc-100 dark:focus:ring-zinc-600/50 dark:active:border-zinc-700"
     >
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -281,7 +281,7 @@ options: [],
                         x-on:keydown.page-up.prevent.stop="navigateResults('first')"
                         x-on:keydown.page-down.prevent.stop="navigateResults('last')"
                         type="text"
-                        class="w-full border-none bg-transparent py-3 text-sm placeholder:text-zinc-500 focus:ring-0 focus:outline-hidden dark:placeholder:text-zinc-400"
+                        class="w-full border-none bg-transparent py-3 text-sm placeholder:text-zinc-500 focus:ring-0 focus:outline-hidden dark:placeholder:text-zinc-200"
                         placeholder="Search..."
                         tabindex="0"
                         role="combobox"
@@ -330,7 +330,7 @@ options: [],
                             'text-white bg-zinc-600 dark:text-white dark:bg-zinc-600': isHighlighted(
                                 option.id,
                             ),
-                            'text-zinc-600 dark:text-zinc-300': ! isHighlighted(option.id),
+                            'text-zinc-600 dark:text-zinc-200': ! isHighlighted(option.id),
                         }"
                         x-bind:data-selected="isHighlighted(option.id)"
                         x-bind:data-id="option.id"
@@ -360,7 +360,7 @@ options: [],
                 class="rounded-b-xl bg-white p-3 dark:bg-zinc-800"
             >
                 <div
-                    class="space-y-3 py-1.5 text-center text-sm text-zinc-500 dark:text-zinc-400"
+                    class="space-y-3 py-1.5 text-center text-sm text-zinc-500 dark:text-zinc-200"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
