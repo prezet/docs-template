@@ -7,25 +7,25 @@
 @php
     $styles = [
         'success' => [
-            'wrapper' => 'border-green-500 bg-green-50/50 dark:bg-green-500/10',
+            'wrapper' => 'border-green-200 bg-green-50/50 dark:border-green-500/20 dark:bg-green-500/5',
             'title' => 'text-green-800 dark:text-green-400',
             'body' => 'text-green-700 dark:text-green-300',
             'icon' => 'text-green-500 dark:text-green-400',
         ],
         'error' => [
-            'wrapper' => 'border-red-500 bg-red-50/50 dark:bg-red-500/10',
+            'wrapper' => 'border-red-200 bg-red-50/50 dark:border-red-500/20 dark:bg-red-500/5',
             'title' => 'text-red-800 dark:text-red-400',
             'body' => 'text-red-700 dark:text-red-300',
             'icon' => 'text-red-500 dark:text-red-400',
         ],
         'warning' => [
-            'wrapper' => 'border-yellow-500 bg-yellow-50/50 dark:bg-yellow-500/10',
+            'wrapper' => 'border-yellow-200 bg-yellow-50/50 dark:border-yellow-500/20 dark:bg-yellow-500/5',
             'title' => 'text-yellow-800 dark:text-yellow-400',
             'body' => 'text-yellow-700 dark:text-yellow-300',
             'icon' => 'text-yellow-500 dark:text-yellow-400',
         ],
         'info' => [
-            'wrapper' => 'border-blue-500 bg-blue-50/50 dark:bg-blue-500/10',
+            'wrapper' => 'border-blue-200 bg-blue-50/50 dark:border-blue-500/20 dark:bg-blue-500/5',
             'title' => 'text-blue-800 dark:text-blue-400',
             'body' => 'text-blue-700 dark:text-blue-300',
             'icon' => 'text-blue-500 dark:text-blue-400',
@@ -42,7 +42,7 @@
     ];
 @endphp
 
-<div class="{{ $style['wrapper'] }} not-prose border-l-4 p-4 rounded-r-lg">
+<div class="{{ $style['wrapper'] }} not-prose border p-4 rounded-lg">
     <div class="flex">
         <div class="shrink-0">
             <svg

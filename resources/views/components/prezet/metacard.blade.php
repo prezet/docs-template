@@ -1,5 +1,5 @@
 <div
-    class="rounded-2xl border p-4"
+    class="rounded-lg border p-4"
     x-data="{ ogimage: '' }"
     x-init="ogimage = document.querySelector('meta[property=\'og:image\']')?.content"
 >

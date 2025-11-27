@@ -2,7 +2,7 @@
     <div class="relative">
         <div class="flex h-16 min-w-0 items-center md:mx-3">
             <div
-                class="relative flex h-full min-w-0 flex-1 items-center gap-x-4 border-b border-gray-200 dark:border-gray-800"
+                class="relative flex h-full min-w-0 flex-1 items-center gap-x-4 border-b border-gray-950/5 dark:border-white/10"
             >
                 <div class="flex flex-1 items-center gap-x-4">
                     <a class="" href="/">
@@ -28,7 +28,7 @@
                     <button
                         type="button"
                         x-on:click="openCommandPalette()"
-                        class="group flex h-9 w-full max-w-xs items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 px-3 text-sm text-gray-500 transition-all hover:border-gray-300 hover:bg-gray-100 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-400 dark:hover:border-gray-700 dark:hover:bg-gray-800"
+                        class="group flex h-9 w-full max-w-xs items-center gap-2 rounded-lg border border-gray-200 bg-white/50 px-3 text-sm text-gray-500 shadow-sm transition-all hover:border-gray-300 hover:bg-white hover:shadow-md dark:border-gray-800 dark:bg-gray-900/50 dark:text-gray-400 dark:hover:border-gray-700 dark:hover:bg-gray-900"
                         aria-label="Open search"
                     >
                         <svg

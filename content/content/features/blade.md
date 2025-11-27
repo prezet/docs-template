@@ -8,26 +8,64 @@ image: /prezet/img/ogimages/features-blade.webp
 
 Prezet allows you to seamlessly integrate Blade components into your Markdown files, enabling you to create dynamic, interactive elements within your static content. 
 
-## The MarkdownBladeExtension
-This feature is powered by the [MarkdownBladeExtension](https://github.com/benbjurstrom/prezet/blob/main/src/Extensions/MarkdownBladeExtension.php). A custom CommonMark extension that's included in the Prezet package. 
+## Component Showcase
 
-The extension looks for fenced code blocks in your Markdown that include the `+parse` info word. When it finds such a block, it renders the content as a Blade component and includes the result in the final HTML output.
+Below is a comprehensive showcase of all available components you can use in your Markdown files. Simply wrap any Blade component in a code block with the `+parse` info word.
 
-This extension was heavily inspired by Aaron Francis's [Blog Post](https://aaronfrancis.com/2023/rendering-blade-components-in-markdown-e2e74e55) and related YouTube video.
+### Alert Component
+
+The Alert component is perfect for displaying important messages, warnings, tips, and notifications in your content.
+
+#### Success Alert
+
+```html +parse
+<x-prezet.alert type="success" title="Success!" body="Your action was completed successfully." />
+```
+
+#### Error Alert
+
+```html +parse
+<x-prezet.alert type="error" title="Error" body="Something went wrong. Please try again." />
+```
+
+#### Warning Alert
+
+```html +parse
+<x-prezet.alert type="warning" title="Warning" body="Please be careful when proceeding with this action." />
+```
+
+#### Info Alert
+
+```html +parse
+<x-prezet.alert type="info" title="Did you know?" body="You can use Blade components directly in your Markdown files using the +parse syntax." />
+```
+
+#### Alert Without Title
+
+```html +parse
+<x-prezet.alert type="info" body="This is an alert without a title. Perfect for simple notifications." />
+```
+
+### YouTube Component
+
+Embed YouTube videos seamlessly in your Markdown content. The component uses lite-youtube-embed for better performance.
 
 ```html +parse
 <x-prezet.youtube videoid="dt1ado9wJi8" title="Supercharge Markdown with Laravel" date="2023-12-15T12:00:00+08:00"/>
 ```
 
-## YouTube Blade Component
+The YouTube component accepts the following attributes:
+- `videoid` (required): The YouTube video ID
+- `title` (required): The title of the video
+- `date` (optional): The publication date in ISO 8601 format
 
-The YouTube video above was rendered from a blade component referenced in the markdown document for this page by inlining the following code block:
+## The MarkdownBladeExtension
 
-    ```html +parse
-    <x-prezet.youtube videoid="dt1ado9wJi8" title="Supercharge Markdown with Laravel"/>
-    ```
+This feature is powered by the [MarkdownBladeExtension](https://github.com/benbjurstrom/prezet/blob/main/src/Extensions/MarkdownBladeExtension.php). A custom CommonMark extension that's included in the Prezet package. 
 
-You can view the source code for the `YouTube` component in the package's [youtube.blade.php](https://github.com/benbjurstrom/prezet/blob/main/resources/views/components/youtube.blade.php) file
+The extension looks for fenced code blocks in your Markdown that include the `+parse` info word. When it finds such a block, it renders the content as a Blade component and includes the result in the final HTML output.
+
+This extension was heavily inspired by Aaron Francis's [Blog Post](https://aaronfrancis.com/2023/rendering-blade-components-in-markdown-e2e74e55) and related YouTube video.
 
 ## Creating Custom Components
 

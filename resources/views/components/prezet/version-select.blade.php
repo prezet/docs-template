@@ -34,7 +34,7 @@
     class="relative hidden sm:block"
 >
     <!-- Menu Button -->
-    <button x-menu:button class="relative flex items-center whitespace-nowrap justify-center gap-2 py-2 rounded-lg shadow-xs bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 hover:border-gray-200 px-4 text-sm dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200 dark:border-gray-700">
+    <button x-menu:button class="relative flex items-center whitespace-nowrap justify-center gap-2 py-1.5 rounded-lg shadow-xs bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 hover:border-gray-200 px-4 text-sm dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200 dark:border-gray-700">
         <span x-text="currentVersion"></span>
 
         <!-- Heroicon: micro chevron-down -->

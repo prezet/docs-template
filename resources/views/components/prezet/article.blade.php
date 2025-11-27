@@ -1,56 +1,28 @@
-<article>
-    <div
-        class="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0"
-    >
-        <dl>
-            <dt class="sr-only">Published on</dt>
-            <dd class="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
-                <time datetime="{{ $article->createdAt->toIso8601String() }}">
-                    {{ $article->createdAt->format('F j, Y') }}
-                </time>
-            </dd>
-        </dl>
-        <div class="space-y-5 xl:col-span-3">
-            <div class="space-y-6">
-                <div>
-                    <h2 class="text-2xl leading-8 font-bold tracking-tight">
-                        <a
-                            class="text-gray-900 dark:text-gray-100"
-                            href="{{ route('prezet.show', $article->slug) }}"
-                        >
-                            {{ $article->frontmatter->title }}
-                        </a>
-                    </h2>
-                    <div class="flex flex-wrap pt-2">
-                        <a
-                            class="mr-3 text-sm font-medium uppercase text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
-                            href="{{ route('prezet.index', ['category' => $article->category]) }}"
-                        >
-                            {{ $article->category }}
-                        </a>
-                        @foreach ($article->frontmatter->tags as $tag)
-                            <a
-                                class="mr-3 text-sm font-medium uppercase text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
-                                href="{{ route('prezet.index', ['tag' => $tag]) }}"
-                            >
-                                {{ $tag }}
-                            </a>
-                        @endforeach
-                    </div>
-                </div>
-                <div class="prose max-w-none text-gray-500 dark:text-gray-400">
-                    {{ $article->frontmatter->excerpt }}
-                </div>
-            </div>
-            <div class="text-base leading-6 font-medium">
-                <a
-                    class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
-                    aria-label='Read more: "Release of Tailwind Nextjs Starter Blog v2.0"'
-                    href="{{ route('prezet.show', $article->slug) }}"
-                >
-                    Read more →
-                </a>
-            </div>
+<article class="md:grid md:grid-cols-4 md:items-baseline">
+    <div class="md:col-span-3 group relative">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+            <a href="{{ route('prezet.show', $article->slug) }}">
+                <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                <span class="relative z-10">{{ $article->frontmatter->title }}</span>
+            </a>
+        </h2>
+        <time class="md:hidden relative z-10 order-first mb-3 flex items-center text-sm text-gray-500 dark:text-gray-400 pl-3.5" datetime="{{ $article->createdAt->toIso8601String() }}">
+            <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+                <span class="h-4 w-0.5 rounded-full bg-gray-200 dark:bg-gray-500"></span>
+            </span>
+            {{ $article->createdAt->format('F j, Y') }}
+        </time>
+        <div class="relative z-10 mt-2 text-sm text-gray-600 dark:text-gray-400">
+             {{ $article->frontmatter->excerpt }}
+        </div>
+        <div class="relative z-10 mt-4 flex items-center text-sm font-medium text-primary-600 dark:text-primary-400">
+            Read article
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
+                <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
         </div>
     </div>
+    <time class="mt-1 hidden md:block relative z-10 order-first mb-3 flex items-center text-sm text-gray-500 dark:text-gray-400" datetime="{{ $article->createdAt->toIso8601String() }}">
+        {{ $article->createdAt->format('F j, Y') }}
+    </time>
 </article>

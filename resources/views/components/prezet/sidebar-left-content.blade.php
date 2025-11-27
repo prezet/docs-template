@@ -11,9 +11,9 @@
                             href="{{ route('prezet.show', ['slug' => $link['slug']]) }}"
                             @class([
                                 'group flex w-full items-center gap-2 rounded-md px-3 py-1.5 text-sm transition-colors',
-                                'bg-primary-50 text-primary-700 font-medium dark:bg-primary-500/10 dark:text-primary-400' =>
+                                'bg-primary-50/50 text-primary-700 font-medium dark:bg-primary-500/10 dark:text-primary-400' =>
                                     url()->current() === route('prezet.show', ['slug' => $link['slug']]),
-                                'text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300' =>
+                                'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300' =>
                                     url()->current() !== route('prezet.show', ['slug' => $link['slug']]),
                             ])
                         >

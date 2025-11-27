@@ -1,5 +1,5 @@
 <footer
-    class="flex justify-between gap-12 border-t border-gray-200 pt-10 pb-28 sm:flex dark:border-gray-800/50"
+    class="flex justify-between gap-12 border-t border-gray-950/5 pt-10 pb-28 sm:flex dark:border-white/5"
 >
     <div class="flex flex-wrap gap-6">
         <a href="https://x.com/benbjurstrom" target="_blank" class="h-fit">

@@ -17,7 +17,7 @@
         <div class="relative">
             <div class="space-y-2.5">
                 <div
-                    class="eyebrow text-primary dark:text-primary-light h-5 text-sm font-semibold"
+                    class="eyebrow text-xs font-bold tracking-wide uppercase text-primary-600 dark:text-primary-400 h-5"
                 >
                     {{ $document->category }}
                 </div>
@@ -26,7 +26,7 @@
                     class="relative flex flex-col items-start gap-2 sm:flex-row sm:items-center"
                 >
                     <h1
-                        class="inline-block text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-gray-200"
+                        class="inline-block text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100"
                     >
                         {{ $document->frontmatter->title }}
                     </h1>
@@ -34,7 +34,7 @@
             </div>
 
             <div
-                class="prose prose-gray dark:prose-invert mt-2 text-lg"
+                class="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300"
             >
                 <p>{{ $document->frontmatter->description }}</p>
             </div>
