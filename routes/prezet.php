@@ -5,6 +5,7 @@ use App\Http\Controllers\Prezet\IndexController;
 use App\Http\Controllers\Prezet\OgimageController;
 use App\Http\Controllers\Prezet\SearchController;
 use App\Http\Controllers\Prezet\ShowController;
+use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,7 @@ Route::withoutMiddleware([
     ShareErrorsFromSession::class,
     StartSession::class,
     VerifyCsrfToken::class,
+    PreventRequestForgery::class,
 ])
     ->group(function () {
         Route::get('prezet/search', SearchController::class)->name('prezet.search');

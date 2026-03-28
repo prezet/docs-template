@@ -11,7 +11,7 @@
         'title' => $document->frontmatter->title,
         'description' => $document->frontmatter->excerpt,
         'url' => route('prezet.show', ['slug' => $document->slug]),
-        'image' => url($document->frontmatter->image),
+        'image' => $document->frontmatter->image ? url($document->frontmatter->image) : null,
     ])
 
     @push('jsonld')
