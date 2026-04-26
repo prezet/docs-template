@@ -5,12 +5,14 @@ use App\Http\Controllers\Prezet\IndexController;
 use App\Http\Controllers\Prezet\OgimageController;
 use App\Http\Controllers\Prezet\SearchController;
 use App\Http\Controllers\Prezet\ShowController;
+use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 Route::withoutMiddleware([
+    PreventRequestForgery::class,
     ShareErrorsFromSession::class,
     StartSession::class,
     VerifyCsrfToken::class,
