@@ -15,7 +15,7 @@ Route::withoutMiddleware([
     PreventRequestForgery::class,
     ShareErrorsFromSession::class,
     StartSession::class,
-    VerifyCsrfToken::class
+    VerifyCsrfToken::class,
 ])
     ->group(function () {
         Route::get('prezet/search', SearchController::class)->name('prezet.search');
